@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio di Giorgia Biticchi — Pasticcera Professionale">
+    <title>Giorgia Biticchi — Pasticcera</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav id="navbar">
+    <a href="#hero" class="nav-logo">G · B</a>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#chi-sono"   onclick="closeMenu()">Chi Sono</a></li>
+        <li><a href="#competenze" onclick="closeMenu()">Competenze</a></li>
+        <li><a href="#esperienza" onclick="closeMenu()">Esperienza</a></li>
+        <li><a href="#formazione" onclick="closeMenu()">Formazione</a></li>
+        <li><a href="#galleria"   onclick="closeMenu()">Galleria</a></li>
+        <li><a href="#contatti"   onclick="closeMenu()">Contatti</a></li>
+    </ul>
+    <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()" aria-label="Apri menu">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section id="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-content">
+        <div class="hero-badge">Pasticceria Professionale</div>
+        <h1 class="hero-name">Giorgia<br><em>Biticchi</em></h1>
+        <p class="hero-tagline">Creo dolci che raccontano storie, con tecnica, passione e un tocco di creatività unica.</p>
+        <div class="hero-cta">
+            <a href="#galleria"  class="btn btn-gold">Guarda le creazioni</a>
+            <a href="#contatti"  class="btn btn-outline">Contattami</a>
+        </div>
+    </div>
+    <div class="hero-scroll">Scopri</div>
+</section>
+
+<!-- ===== CHI SONO ===== -->
+<section id="chi-sono">
+    <div class="container">
+        <h2 class="section-title fade-up">Chi Sono</h2>
+        <p class="section-subtitle fade-up delay-1">Passione, creatività e professionalità in ogni creazione</p>
+        <div class="about-grid">
+            <div class="about-text fade-up delay-2">
+                <p>Sono una giovane aspirante pasticcera con grande passione e voglia di crescere professionalmente. Amo la pasticceria perché è uno strumento creativo e variegato che mi permette di esprimere la mia personalità.</p>
+                <p>Il mio percorso professionale mi ha permesso di sviluppare solide competenze organizzative e gestionali — dalla gestione dei fornitori alla pianificazione della produzione — che oggi metto al servizio della mia vera vocazione: l'arte della pasticceria.</p>
+                <p>Ho frequentato un corso professionale di 90 ore conseguendo l'attestato di merito, e continuo a coltivare questa passione ogni giorno, sperimentando dolci per amici e famiglia e arricchendo il mio repertorio con ispirazioni culinarie da tutto il mondo.</p>
+            </div>
+            <div class="about-card fade-up delay-3">
+                <div class="detail-row">
+                    <div class="detail-icon">TEL</div>
+                    <div>
+                        <div class="detail-label">Telefono</div>
+                        <div class="detail-value">334 9711201</div>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <div class="detail-icon">@</div>
+                    <div>
+                        <div class="detail-label">Email</div>
+                        <div class="detail-value">giorgia.biticchi@gmail.com</div>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <div class="detail-icon">PAT</div>
+                    <div>
+                        <div class="detail-label">Mobilità</div>
+                        <div class="detail-value">Patente B &mdash; Automunita</div>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <div class="detail-icon">LNG</div>
+                    <div>
+                        <div class="detail-label">Lingue</div>
+                        <div class="detail-value">Italiano &middot; Inglese B2 &middot; Coreano A2</div>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <div class="detail-icon">HCP</div>
+                    <div>
+                        <div class="detail-label">Certificazioni</div>
+                        <div class="detail-value">HACCP &mdash; Manipolazione alimenti</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== COMPETENZE TECNICHE ===== -->
+<section id="competenze">
+    <div class="container">
+        <h2 class="section-title fade-up">Competenze Tecniche</h2>
+        <p class="section-subtitle fade-up delay-1">Dalla teoria alla pratica: il mio repertorio di pasticceria</p>
+        <div class="skills-grid">
+            <div class="skill-card fade-up">
+                <div class="skill-card-num">I</div>
+                <h3>Basi di Pasticceria</h3>
+                <ul class="skill-list">
+                    <li>Pan di Spagna</li>
+                    <li>Pasta frolla e biscotti</li>
+                    <li>Pasta sfoglia e brisè</li>
+                    <li>Bignè</li>
+                    <li>Cake e torte da forno</li>
+                    <li>Meringhe</li>
+                </ul>
+            </div>
+            <div class="skill-card fade-up delay-1">
+                <div class="skill-card-num">II</div>
+                <h3>Creme e Semifreddi</h3>
+                <ul class="skill-list">
+                    <li>Crema pasticcera</li>
+                    <li>Crema inglese</li>
+                    <li>Mousse</li>
+                    <li>Bavaresi</li>
+                    <li>Semifreddi</li>
+                </ul>
+            </div>
+            <div class="skill-card fade-up delay-2">
+                <div class="skill-card-num">III</div>
+                <h3>Torte Moderne</h3>
+                <ul class="skill-list">
+                    <li>Progettazione e composizione</li>
+                    <li>Decorazione professionale</li>
+                    <li>Torte da cerimonia</li>
+                    <li>Torte entremets e mousse</li>
+                </ul>
+            </div>
+            <div class="skill-card fade-up delay-3">
+                <div class="skill-card-num">IV</div>
+                <h3>Lievitati e Attrezzature</h3>
+                <ul class="skill-list">
+                    <li>Preparazione di lievitati</li>
+                    <li>Planetarie professionali</li>
+                    <li>Sfogliatrici</li>
+                    <li>Impastatrici</li>
+                </ul>
+            </div>
+            <div class="skill-card fade-up delay-4">
+                <div class="skill-card-num">V</div>
+                <h3>Gestione e Organizzazione</h3>
+                <ul class="skill-list">
+                    <li>Gestione fornitori e scorte</li>
+                    <li>Corrispondenza commerciale</li>
+                    <li>Stoccaggio e verifica scadenze</li>
+                    <li>Pianificazione produzione</li>
+                </ul>
+            </div>
+            <div class="skill-card fade-up delay-5">
+                <div class="skill-card-num">VI</div>
+                <h3>Sicurezza Alimentare</h3>
+                <ul class="skill-list">
+                    <li>Certificazione HACCP</li>
+                    <li>Igienizzazione professionale</li>
+                    <li>Manipolazione alimenti</li>
+                    <li>Normative del settore</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== SOFT SKILLS ===== -->
+<section id="soft-skills">
+    <div class="container">
+        <h2 class="section-title fade-up">Soft Skills</h2>
+        <p class="section-subtitle fade-up delay-1">Le qualità che porto ogni giorno nel mio lavoro</p>
+        <div class="pills-wrap fade-up delay-2">
+            <span class="pill">Creatività</span>
+            <span class="pill">Organizzazione</span>
+            <span class="pill">Conoscenza degli ingredienti</span>
+            <span class="pill">Sicurezza e igiene alimentare</span>
+            <span class="pill">Gestione fornitori e scorte</span>
+            <span class="pill">Lavoro in squadra</span>
+            <span class="pill">Ottimizzazione dei tempi</span>
+            <span class="pill">Attenzione al dettaglio</span>
+            <span class="pill">Problem solving</span>
+        </div>
+    </div>
+</section>
+
+<!-- ===== ESPERIENZA ===== -->
+<section id="esperienza">
+    <div class="container">
+        <h2 class="section-title fade-up">Esperienza</h2>
+        <p class="section-subtitle fade-up delay-1">Il mio percorso professionale</p>
+        <div class="timeline">
+            <div class="t-item fade-up delay-2">
+                <div class="t-dot"></div>
+                <div class="t-box">
+                    <div class="t-date">Dicembre 2017 &mdash; Novembre 2025</div>
+                    <h3>Impiegata Commerciale</h3>
+                    <div class="t-company">Chemical Research 2000 Srl</div>
+                    <ul>
+                        <li>Gestione delle corrispondenze commerciali con clienti e fornitori, dall'offerta alla fatturazione</li>
+                        <li>Pratiche di stoccaggio merci e coordinamento spedizioni</li>
+                        <li>Gestione delle scorte: verifica scadenze e riordino prodotti</li>
+                        <li>Partecipazione attiva alla creazione di progetti di produzione e catene di montaggio</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="t-item fade-up delay-3">
+                <div class="t-dot"></div>
+                <div class="t-box">
+                    <div class="t-date">Esperienza Pluriennale</div>
+                    <h3>Responsabile Cucina &mdash; Volontariato</h3>
+                    <div class="t-company">Pub a scopo benefico</div>
+                    <ul>
+                        <li>Gestione completa della cucina in ambito benefico</li>
+                        <li>Preparazione e organizzazione della linea di produzione</li>
+                        <li>Coordinamento cucina e gestione del servizio</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FORMAZIONE ===== -->
+<section id="formazione">
+    <div class="container">
+        <h2 class="section-title fade-up">Istruzione e Formazione</h2>
+        <p class="section-subtitle fade-up delay-1">Un percorso di crescita continua</p>
+        <div class="edu-grid">
+            <div class="edu-card fade-up">
+                <div class="edu-year">Aprile 2026</div>
+                <h3>Corso di Pasticceria Professionale</h3>
+                <div class="edu-institution">Scuola di Cucina "TuChef"</div>
+                <div class="edu-detail">Monte ore: 90 &mdash; Crediti Formativi: 50</div>
+                <span class="edu-badge">Attestato di Merito</span>
+            </div>
+            <div class="edu-card fade-up delay-1">
+                <div class="edu-year">Marzo 2026</div>
+                <h3>HACCP &mdash; Manipolazione Alimenti</h3>
+                <div class="edu-institution">Scuola TuChef</div>
+                <div class="edu-detail">Corso di formazione di 6 ore in "Qualità di addetto alla manipolazione di alimenti"</div>
+                <span class="edu-badge">Certificazione HACCP</span>
+            </div>
+            <div class="edu-card fade-up delay-2">
+                <div class="edu-year">A.A. 2016/2017</div>
+                <h3>Laurea in Lingue e Civiltà Orientali</h3>
+                <div class="edu-institution">Università La Sapienza di Roma</div>
+                <div class="edu-detail">Diploma di laurea triennale</div>
+                <span class="edu-badge">Laurea Triennale</span>
+            </div>
+            <div class="edu-card fade-up delay-3">
+                <div class="edu-year">A.A. 2010/2011</div>
+                <h3>Diploma Tecnico dei Servizi Sociali</h3>
+                <div class="edu-institution">Istituto Professionale "Jean Piaget"</div>
+                <div class="edu-detail">Diploma di maturità professionale</div>
+                <span class="edu-badge">Diploma</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== HOBBY ===== -->
+<section id="hobby">
+    <div class="container">
+        <h2 class="section-title fade-up">Hobby e Interessi</h2>
+        <p class="section-subtitle fade-up delay-1">Ciò che mi ispira ogni giorno</p>
+        <div class="hobby-grid">
+            <div class="hobby-card fade-up">
+                <div class="hobby-symbol">P</div>
+                <h3>Pasticceria Creativa</h3>
+                <p>Sperimento e creo dolci per amici e famiglia, coltivando la mia passione nel tempo libero</p>
+            </div>
+            <div class="hobby-card fade-up delay-1">
+                <div class="hobby-symbol">L</div>
+                <h3>Lettura</h3>
+                <p>Fonte di ispirazione e crescita personale, arricchisce il mio approccio creativo in cucina</p>
+            </div>
+            <div class="hobby-card fade-up delay-2">
+                <div class="hobby-symbol">V</div>
+                <h3>Viaggi</h3>
+                <p>Esploro le cucine del mondo per scoprire nuovi sapori e arricchire il mio repertorio</p>
+            </div>
+            <div class="hobby-card fade-up delay-3">
+                <div class="hobby-symbol">O</div>
+                <h3>Culture Orientali</h3>
+                <p>Passione per le lingue e le culture: studio di coreano e affascinante universo culinario asiatico</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== GALLERIA ===== -->
+<section id="galleria">
+    <div class="container">
+        <h2 class="section-title fade-up">Galleria</h2>
+        <p class="section-subtitle fade-up delay-1">Le mie creazioni</p>
+
+        <!-- Filtri per categoria -->
+        <div class="gallery-filters fade-up delay-2">
+            <button class="filter-btn active" data-filter="all">Tutte</button>
+            <button class="filter-btn" data-filter="torte">Torte</button>
+            <button class="filter-btn" data-filter="biscotti">Biscotti & Frolla</button>
+            <button class="filter-btn" data-filter="lievitati">Lievitati</button>
+            <button class="filter-btn" data-filter="creme">Creme & Mousse</button>
+        </div>
+
+        <div class="gallery-grid fade-up delay-3">
+
+            <!--
+            ╔══════════════════════════════════════════════════════╗
+            ║  COME AGGIUNGERE UNA FOTO                           ║
+            ║                                                      ║
+            ║  1. Salva la foto nella cartella /images             ║
+            ║  2. Copia uno dei blocchi <figure> qui sotto         ║
+            ║  3. Sostituisci "images/nome-file.jpg"               ║
+            ║     con il percorso della tua immagine               ║
+            ║  4. Modifica alt e data-caption con il nome del dolce║
+            ║  5. Scegli data-category tra:                        ║
+            ║     torte | biscotti | lievitati | creme             ║
+            ║                                                      ║
+            ║  Esempio:                                            ║
+            ╚══════════════════════════════════════════════════════╝
+
+            <figure class="gallery-item" data-caption="Torta sacher" data-category="torte">
+                <img src="images/sacher.jpg" alt="Torta sacher" loading="lazy">
+                <figcaption class="gallery-overlay"><span>sacher</span></figcaption>
+            </figure>
+
+            <figure class="gallery-item" data-caption="Crostata alle fragole" data-category="biscotti">
+                <img src="images/crostata-fragole.jpg" alt="Crostata alle fragole" loading="lazy">
+                <figcaption class="gallery-overlay"><span>Crostata alle fragole</span></figcaption>
+            </figure>
+
+            <figure class="gallery-item" data-caption="Mousse al limone" data-category="creme">
+                <img src="images/mousse-limone.jpg" alt="Mousse al limone" loading="lazy">
+                <figcaption class="gallery-overlay"><span>Mousse al limone</span></figcaption>
+            </figure>
+
+            <figure class="gallery-item" data-caption="Croissant sfogliati" data-category="lievitati">
+                <img src="images/croissant.jpg" alt="Croissant sfogliati" loading="lazy">
+                <figcaption class="gallery-overlay"><span>Croissant sfogliati</span></figcaption>
+            </figure>
+            -->
+
+            <!-- Slot vuoti — sostituiscili con le tue foto seguendo le istruzioni sopra -->
+            
+                 <figure class="gallery-item" data-caption="Torta sacher" data-category="torte">
+                <img src="images/sacher.jpg" alt="Torta sacher" loading="lazy">
+                <figcaption class="gallery-overlay"><span>Torta sacher</span></figcaption>
+            </figure>
+         
+             <figure class="gallery-item" data-caption="Torta sacher" data-category="torte">
+                <img src="images/sacher.jpg" alt="Torta sacher" loading="lazy">
+                <figcaption class="gallery-overlay"><span>Torta sacher</span></figcaption>
+            </figure>
+
+             <figure class="gallery-item" data-caption="Torta sacher" data-category="torte">
+                <img src="images/sacher.jpg" alt="Torta sacher" loading="lazy">
+                <figcaption class="gallery-overlay"><span>Torta sacher</span></figcaption>
+            </figure>
+
+        </div>
+    </div>
+</section>
+
+<!-- ===== LIGHTBOX ===== -->
+<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Visualizzatore immagini">
+    <button class="lb-close" id="lb-close" aria-label="Chiudi">&times;</button>
+    <button class="lb-arrow lb-prev" id="lb-prev" aria-label="Immagine precedente">&#8249;</button>
+    <div class="lb-content">
+        <img id="lb-img" src="" alt="">
+        <p id="lb-caption"></p>
+        <span id="lb-counter" class="lb-counter"></span>
+    </div>
+    <button class="lb-arrow lb-next" id="lb-next" aria-label="Immagine successiva">&#8250;</button>
+</div>
+
+<!-- ===== CONTATTI ===== -->
+<section id="contatti">
+    <div class="container">
+        <h2 class="section-title fade-up">Contatti</h2>
+        <p class="section-subtitle fade-up delay-1">Sono disponibile per collaborazioni e opportunità nel settore della pasticceria</p>
+
+        <div class="contact-row fade-up delay-2">
+            <a href="tel:3349711201" class="contact-block">
+                <div class="cb-icon">
+                    <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                </div>
+                <span class="cb-label">Telefono</span>
+                <span class="cb-value">334 9711201</span>
+            </a>
+            <a href="mailto:giorgia.biticchi@gmail.com" class="contact-block">
+                <div class="cb-icon">
+                    <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <span class="cb-label">Email</span>
+                <span class="cb-value">giorgia.biticchi@gmail.com</span>
+            </a>
+        </div>
+
+        <div class="fade-up delay-3">
+            <p class="lang-section-label">Lingue parlate</p>
+            <div class="langs-wrap">
+                <div class="lang-tag">
+                    <strong>Italiano</strong>
+                    <span>Madrelingua</span>
+                </div>
+                <div class="lang-tag">
+                    <strong>English</strong>
+                    <span>Livello B2</span>
+                </div>
+                <div class="lang-tag">
+                    <strong>&#54620;&#44397;&#50612;</strong>
+                    <span>Livello A2</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+    <p>&copy; 2026 Giorgia Biticchi &mdash; Portfolio Pasticcera &middot; Tutti i diritti riservati</p>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

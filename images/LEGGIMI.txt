@@ -1,0 +1,23 @@
+COME AGGIUNGERE LE TUE FOTO
+============================
+
+1. Salva qui le tue immagini (JPG, PNG, WEBP)
+   - Usa nomi senza spazi, es: torta-cioccolato.jpg
+
+2. Apri index.html e trova la sezione GALLERIA
+
+3. Sostituisci uno slot vuoto (<div class="gallery-placeholder">)
+   con un blocco immagine, ad esempio:
+
+   <figure class="gallery-item" data-caption="Torta al cioccolato" data-category="torte">
+       <img src="images/torta-cioccolato.jpg" alt="Torta al cioccolato" loading="lazy">
+       <figcaption class="gallery-overlay"><span>Torta al cioccolato</span></figcaption>
+   </figure>
+
+4. Per data-category usa uno di questi valori:
+   - torte
+   - biscotti
+   - lievitati
+   - creme
+
+Puoi aggiungere tutte le foto che vuoi!
