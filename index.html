@@ -21,6 +21,7 @@
         <li><a href="#esperienza" onclick="closeMenu()">Esperienza</a></li>
         <li><a href="#formazione" onclick="closeMenu()">Formazione</a></li>
         <li><a href="#galleria"   onclick="closeMenu()">Galleria</a></li>
+        <li><a href="#ordina"     onclick="closeMenu()">Ordina</a></li>
         <li><a href="#contatti"   onclick="closeMenu()">Contatti</a></li>
     </ul>
     <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()" aria-label="Apri menu">
@@ -37,7 +38,7 @@
         <p class="hero-tagline">Torte moderne, lievitati artigianali e pasticceria classica — con tecnica, cura del dettaglio e un tocco di ispirazione orientale.</p>
         <div class="hero-cta">
             <a href="#galleria"  class="btn btn-gold">Guarda le creazioni</a>
-            <a href="#contatti"  class="btn btn-outline">Contattami</a>
+            <a href="#ordina"    class="btn btn-outline">Ordina una torta</a>
         </div>
     </div>
     <div class="hero-scroll">Scopri</div>
@@ -377,6 +378,180 @@
     <button class="lb-arrow lb-next" id="lb-next" aria-label="Immagine successiva">&#8250;</button>
 </div>
 
+<!-- ===== ORDINA ===== -->
+<section id="ordina">
+    <div class="container">
+        <h2 class="section-title fade-up">Ordina la tua Torta</h2>
+        <p class="section-subtitle fade-up delay-1">Compleanni, battesimi, lauree, ricevimenti: componi la torta per la tua festa</p>
+
+        <form id="orderForm" class="order-layout" novalidate>
+
+            <!-- Colonna sinistra: configurazione -->
+            <div class="order-steps">
+
+                <!-- 1. Torta -->
+                <fieldset class="order-step fade-up">
+                    <legend><span class="step-num">1</span> Scegli la torta</legend>
+                    <div class="cake-options" id="cakeOptions"><!-- generato da main.js --></div>
+                </fieldset>
+
+                <!-- 2. Persone -->
+                <fieldset class="order-step fade-up">
+                    <legend><span class="step-num">2</span> Per quante persone?</legend>
+                    <div class="counter">
+                        <button type="button" class="counter-btn" id="peopleMinus" aria-label="Diminuisci persone">&minus;</button>
+                        <div class="counter-value">
+                            <output id="peopleValue" aria-live="polite">8</output>
+                            <span>persone</span>
+                        </div>
+                        <button type="button" class="counter-btn" id="peoplePlus" aria-label="Aumenta persone">+</button>
+                    </div>
+                    <p class="field-hint" id="peopleHint"></p>
+                </fieldset>
+
+                <!-- 3. Forma -->
+                <fieldset class="order-step fade-up">
+                    <legend><span class="step-num">3</span> Scegli la forma</legend>
+                    <div class="shape-options">
+                        <label class="shape-option">
+                            <input type="radio" name="forma" value="rotonda" checked>
+                            <span class="shape-card"><span class="shape-icon shape-icon-round"></span>Rotonda</span>
+                        </label>
+                        <label class="shape-option">
+                            <input type="radio" name="forma" value="rettangolare">
+                            <span class="shape-card"><span class="shape-icon shape-icon-rect"></span>Rettangolare</span>
+                        </label>
+                    </div>
+                </fieldset>
+
+                <!-- 4. Scritta / decorazione -->
+                <fieldset class="order-step fade-up">
+                    <legend><span class="step-num">4</span> Scritta e decorazione</legend>
+                    <div class="form-grid">
+                        <label class="field">
+                            <span>Occasione</span>
+                            <select name="occasione">
+                                <option value="Compleanno">Compleanno</option>
+                                <option value="Festa">Festa</option>
+                                <option value="Ricevimento">Ricevimento</option>
+                                <option value="Battesimo">Battesimo</option>
+                                <option value="Comunione / Cresima">Comunione / Cresima</option>
+                                <option value="Laurea">Laurea</option>
+                                <option value="Anniversario">Anniversario</option>
+                                <option value="Altro">Altro</option>
+                            </select>
+                        </label>
+                        <label class="field">
+                            <span>Data del ritiro *</span>
+                            <input type="date" name="data_ritiro" id="pickupDate" required>
+                        </label>
+                        <label class="field field-full">
+                            <span>Scritta sulla torta</span>
+                            <input type="text" name="scritta" id="cakeText" maxlength="50" placeholder="Es. Buon compleanno Maria">
+                        </label>
+                        <label class="field field-full">
+                            <span>Richiesta di decorazione</span>
+                            <textarea name="decorazione" rows="3" maxlength="500" placeholder="Colori, temi, fiori, frutta, cialda con foto..."></textarea>
+                        </label>
+                    </div>
+                </fieldset>
+
+                <!-- 5. Dati personali -->
+                <fieldset class="order-step fade-up">
+                    <legend><span class="step-num">5</span> I tuoi dati</legend>
+                    <div class="form-grid">
+                        <label class="field">
+                            <span>Nome *</span>
+                            <input type="text" name="nome" autocomplete="given-name" required>
+                        </label>
+                        <label class="field">
+                            <span>Cognome *</span>
+                            <input type="text" name="cognome" autocomplete="family-name" required>
+                        </label>
+                        <label class="field">
+                            <span>Email *</span>
+                            <input type="email" name="email" autocomplete="email" required>
+                        </label>
+                        <label class="field">
+                            <span>Telefono *</span>
+                            <input type="tel" name="telefono" autocomplete="tel" required pattern="[0-9 +()\-]{6,}">
+                        </label>
+                        <div class="field field-full">
+                            <span>Allergeni o intolleranze</span>
+                            <div class="allergen-list">
+                                <label><input type="checkbox" name="allergeni" value="Glutine"> Glutine</label>
+                                <label><input type="checkbox" name="allergeni" value="Lattosio"> Lattosio</label>
+                                <label><input type="checkbox" name="allergeni" value="Uova"> Uova</label>
+                                <label><input type="checkbox" name="allergeni" value="Frutta a guscio"> Frutta a guscio</label>
+                                <label><input type="checkbox" name="allergeni" value="Arachidi"> Arachidi</label>
+                                <label><input type="checkbox" name="allergeni" value="Soia"> Soia</label>
+                            </div>
+                            <input type="text" name="allergeni_altro" placeholder="Altro (specifica)">
+                        </div>
+                        <label class="field field-full">
+                            <span>Messaggio</span>
+                            <textarea name="messaggio" rows="3" maxlength="1000" placeholder="Altre richieste o domande"></textarea>
+                        </label>
+                        <label class="field-check field-full">
+                            <input type="checkbox" name="privacy" required>
+                            <span>Acconsento al trattamento dei dati personali per la gestione dell'ordine *</span>
+                        </label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <!-- Colonna destra: anteprima + riepilogo -->
+            <aside class="order-preview fade-up delay-1">
+                <div class="preview-card">
+                    <div class="preview-stage">
+                        <div class="preview-plate" id="previewPlate">
+                            <div class="preview-cake" id="previewCake">
+                                <img id="previewImg" src="" alt="">
+                                <span class="preview-text" id="previewText"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 id="previewName">&nbsp;</h3>
+                    <dl class="preview-specs">
+                        <div><dt>Persone</dt><dd id="specPeople">-</dd></div>
+                        <div><dt>Dimensioni</dt><dd id="specSize">-</dd></div>
+                        <div><dt>Peso stimato</dt><dd id="specWeight">-</dd></div>
+                    </dl>
+                    <div class="preview-price">
+                        <span>Prezzo stimato</span>
+                        <strong id="specPrice">-</strong>
+                        <small>Calcolato su 22 &euro;/kg. Il prezzo finale verrà confermato in base alle decorazioni richieste.</small>
+                    </div>
+                    <button type="submit" class="btn btn-gold btn-block">Invia richiesta d'ordine</button>
+                    <p class="form-error" id="formError" role="alert"></p>
+                </div>
+            </aside>
+        </form>
+    </div>
+</section>
+
+<!-- ===== MODALE CONFERMA ORDINE ===== -->
+<div id="orderModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-box">
+        <button type="button" class="modal-close" id="modalClose" aria-label="Chiudi">&times;</button>
+        <div id="modalReview">
+            <h3 id="modalTitle">Confermi l'ordine?</h3>
+            <p class="modal-intro">Controlla il riepilogo prima di inviare la richiesta.</p>
+            <dl class="modal-summary" id="modalSummary"></dl>
+            <div class="modal-actions">
+                <button type="button" class="btn btn-ghost" id="modalBack">Modifica</button>
+                <button type="button" class="btn btn-gold" id="modalConfirm">Conferma e invia</button>
+            </div>
+        </div>
+        <div id="modalResult" class="modal-result" hidden>
+            <div class="modal-result-icon" id="modalResultIcon"></div>
+            <h3 id="modalResultTitle"></h3>
+            <p id="modalResultText"></p>
+            <button type="button" class="btn btn-gold" id="modalDone">Chiudi</button>
+        </div>
+    </div>
+</div>
+
 <!-- ===== CONTATTI ===== -->
 <section id="contatti">
     <div class="container">
@@ -409,5 +584,6 @@
 </footer>
 
 <script src="main.js"></script>
+<script src="order.js"></script>
 </body>
 </html>
